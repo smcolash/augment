@@ -1,1 +1,32 @@
+<!doctype HTML>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="application-name" content="Sarah">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body _style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+  <a-assets>
+    <img id="my-image" src="Sarah.jpg">
+  </a-assets>
+
+  <a-image rotation="90 0 180" src="#my-image"></a-image>
+    <a-marker-camera type='pattern' url='pattern-marker.patt'></a-marker-camera>
+  </a-scene>
+</body>
+
+</html>
